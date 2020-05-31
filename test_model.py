@@ -74,7 +74,7 @@ def predict_from_video(video_input_path, original_video_output_path, combined_vi
         combined_image_test = cv2.normalize(combined_image, None, alpha=-1, beta=1, norm_type=cv2.NORM_MINMAX,
                                             dtype=cv2.CV_32F)
 
-        # combined_image_test = cv2.resize(combined_image_test, (0, 0), fx=0.3, fy=0.3)
+        combined_image_test = cv2.resize(combined_image_test, (0, 0), fx=0.3333, fy=0.3333)
 
         combined_image_test = combined_image_test.reshape(1, combined_image_test.shape[0], combined_image_test.shape[1],
                                                           combined_image_test.shape[2])
