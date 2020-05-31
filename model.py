@@ -6,8 +6,7 @@ from keras.optimizers import Adam
 
 def cnn_model():
     model = Sequential()
-    model.add(Conv2D(12, (5, 5), activation='elu', input_shape=(360, 640, 3), kernel_initializer='he_normal'))
-    # model.add(Conv2D(12, (5, 5), activation='elu', input_shape=(240, 320, 3), kernel_initializer='he_normal'))
+    model.add(Conv2D(12, (5, 5), activation='elu', input_shape=(240, 320, 3), kernel_initializer='he_normal'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Conv2D(24, (5, 5), activation='elu', padding='SAME',  kernel_initializer='he_normal'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
